@@ -1,7 +1,7 @@
 import numpy as np
 import tensorflow as tf
 
-from anonymizer.utils import Box
+from anonymizer.anonymizer.utils import Box
 
 
 class Detector:

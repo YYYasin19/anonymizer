@@ -4,7 +4,7 @@ import numpy as np
 import scipy.stats as st
 import tensorflow as tf
 
-from anonymizer.obfuscation.helpers import kernel_initializer, bilinear_filter, get_default_session_config
+from anonymizer.anonymizer.obfuscation.helpers import kernel_initializer, bilinear_filter, get_default_session_config
 
 
 class Obfuscator:

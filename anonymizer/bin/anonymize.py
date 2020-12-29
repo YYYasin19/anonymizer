@@ -17,9 +17,9 @@ limitations under the License.
 
 import argparse
 
-from anonymizer.anonymization import Anonymizer
-from anonymizer.detection import Detector, download_weights, get_weights_path
-from anonymizer.obfuscation import Obfuscator
+from anonymizer.anonymizer.anonymization import Anonymizer
+from anonymizer.anonymizer.detection import Detector, download_weights, get_weights_path
+from anonymizer.anonymizer.obfuscation import Obfuscator
 
 
 def parse_args():
