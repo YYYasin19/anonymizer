@@ -2,7 +2,11 @@ import math
 
 import numpy as np
 import scipy.stats as st
+
+# import tensorflow._api.v2.compat.v1 as tf
+# tf.disable_v2_behavior()
 import tensorflow as tf
+
 
 from anonymizer.anonymizer.obfuscation.helpers import kernel_initializer, bilinear_filter, get_default_session_config
 
@@ -66,6 +70,7 @@ class Obfuscator:
 
     def _build_graph(self):
         """ Builds the tensorflow graph containing all necessary operations for the blurring procedure. """
+        # tf.disable_eager_execution()
         with tf.variable_scope('gaussian_blurring'):
             image = tf.placeholder(dtype=tf.float32, shape=[None, None, None, self.channels], name='x_input')
             mask = tf.placeholder(dtype=tf.float32, shape=[None, None, None, 1], name='x_input')
